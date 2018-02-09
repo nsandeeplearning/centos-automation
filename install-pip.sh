@@ -26,7 +26,7 @@ chmod 777 get-pip.py
 echo "Assiginging permissions to get-pip.py completed....."
 
 echo "Installation of get-pip.py started....."
-python get-pip.py -y
+python get-pip.py
 echo "Installation of get-pip.py completed....."
 echo "get-pip.py installed Successfully....."
 
