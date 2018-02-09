@@ -20,7 +20,7 @@ echo "Downloading oracle-instantclient12.2-tools-12-x64.rpm started..."
 wget -O oracle-instantclient12.2-tools-12-x64.rpm  --no-cookies \
          --no-check-certificate \
          --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-         -N http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_64.rpm
+         -N http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
 echo "Downloading oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_64.rpm completed..."
 
 echo "Assiginging permissions to oracle-instantclient12.2-tools-12-x64.rpm started..."
