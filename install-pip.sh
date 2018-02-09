@@ -33,6 +33,8 @@ echo "get-pip.py installed Successfully....."
 echo "Verifying get-pip.py installation...."
 pip -V
 
+pip --help
+
 echo "Removing get-pip.py started......"
 rm get-pip.py
 echo "Removing get-pip.py completed......"
