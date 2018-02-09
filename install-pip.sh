@@ -19,7 +19,6 @@ fi
 
 echo "Downloading pip started......."
 wget -O get-pip.py  "https://bootstrap.pypa.io/get-pip.py"
-done
 echo "Downloading get-pip.py completed......."
 
 echo "Assiginging permissions to get-pip.py started....."
