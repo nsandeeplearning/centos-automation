@@ -5,7 +5,6 @@
 #date            :Fri Feb  9 06:07:04 EST 2018
 #version         :0.1   
 #usage		     :bash oracle-instantclient12.2-tools-12-x64
-
 # You must accept the Oracle Binary Code License
 # http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 # usage: get_jdk.sh <jdk_version> <ext>
