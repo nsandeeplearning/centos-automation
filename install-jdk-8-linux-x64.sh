@@ -57,8 +57,8 @@ sudo yum localinstall jdk-8-linux-x64.rpm -y
 echo "Installation of jdk-8-linux-x64.rpm completed....."
 echo "jdk-8-linux-x64.rpm installed Successfully....."
 
-echo "Verifying jdk-8-linux-x64.rpm installation...."
-java -version
+#echo "Verifying jdk-8-linux-x64.rpm installation...."
+#java -version
 
 echo "Removing jdk-8-linux-x64.rpm started......"
 rm jdk-8-linux-x64.rpm
