@@ -26,3 +26,7 @@ echo "Downloading oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_64.rpm complet
 echo "Assiginging permissions to jdk-8-linux-x64.rpm started..."
 chmod 777 oracle-instantclient12.2-tools-12-x64.rpm
 echo "Assiginging permissions to jdk-8-linux-x64.rpm completed..."
+
+echo "oracle-instantclient12.2-tools-12-x64.rpm started......"
+oracle-instantclient12.2-tools-12-x64.rpm
+echo "oracle-instantclient12.2-tools-12-x64.rpm completed......"
