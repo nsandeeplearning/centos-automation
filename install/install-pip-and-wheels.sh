@@ -1,10 +1,10 @@
 #!/bin/bash    
-#title           :install-install-pip.sh
-#description     :This script will install pip
+#title           :install-pip-and-wheels.sh
+#description     :This script will install pip and wheel
 #author		     :nsandeep
 #date            :Fri Feb  9 06:07:04 EST 2018
 #version         :0.1   
-#usage		     :bash install-pip.sh
+#usage		     :bash install-pip-and-wheels.sh
 
 # You must accept the Oracle Binary Code License
 # http://www.oracle.com/technetwork/java/javase/terms/license/index.html
@@ -33,8 +33,16 @@ echo "get-pip.py installed Successfully....."
 echo "Verifying get-pip.py installation...."
 pip -V
 
-pip --help
-
 echo "Removing get-pip.py started......"
 rm get-pip.py
 echo "Removing get-pip.py completed......"
+
+
+echo "Installation of python -m pip install --upgrade pip setuptools wheel started....."
+python -m pip install --upgrade pip setuptools wheel
+echo "Installation of python -m pip install --upgrade pip setuptools wheel completed....."
+
+
+
+
+
