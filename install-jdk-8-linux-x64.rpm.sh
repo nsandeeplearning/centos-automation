@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/bin/bash -       
+#title           :install-jdk-8-linux-x64.rpm.sh
+#description     :This script will install java8
+#author		     :nsandeep
+#date            :Fri Feb  9 06:07:04 EST 2018
+#version         :0.1   
+#usage		     :bash install-jdk-8-linux-x64.rpm.sh
 
 # You must accept the Oracle Binary Code License
 # http://www.oracle.com/technetwork/java/javase/terms/license/index.html
@@ -14,8 +20,7 @@ fi
 jdk_version=${1:-8}
 ext=${2:-rpm}
 
-echo "Checking for Avaliable java-8 versions..."
-
+echo "Checking for Avaliable java-8 versions started....."
 readonly url="http://www.oracle.com"
 readonly jdk_download_url1="$url/technetwork/java/javase/downloads/index.html"
 readonly jdk_download_url2=$(
@@ -31,9 +36,9 @@ readonly jdk_download_url4=$(
     curl -s $jdk_download_url3 | \
     egrep -o "http\:\/\/download.oracle\.com\/otn-pub\/java\/jdk\/[8-9](u[0-9]+|\+).*\/jdk-${jdk_version}.*(-|_)linux-(x64|x64_bin).$ext" | tail -1
 )
+echo "Checking for Avaliable java-8 versions completed....."
 
-echo "Downloading jdk-8-linux-x64.rpm..."
-
+echo "Downloading jdk-8-linux-x64.rpm started......."
 for dl_url in ${jdk_download_url4[@]}; do
 
     wget -O jdk-8-linux-x64.rpm  --no-cookies \
@@ -41,17 +46,20 @@ for dl_url in ${jdk_download_url4[@]}; do
          --header "Cookie: oraclelicense=accept-securebackup-cookie" \
          -N $dl_url
 done
+echo "Downloading jdk-8-linux-x64.rpm completed......."
 
-echo "Assiginging permissions to jdk-8-linux-x64.rpm..."
+echo "Assiginging permissions to jdk-8-linux-x64.rpm started....."
 chmod 777 jdk-8-linux-x64.rpm
+echo "Assiginging permissions to jdk-8-linux-x64.rpm completed....."
 
-echo "Installation..."
+echo "Installation of jdk-8-linux-x64.rpm started....."
 sudo yum localinstall jdk-8-linux-x64.rpm -y
+echo "Installation of jdk-8-linux-x64.rpm completed....."
 echo "jdk-8-linux-x64.rpm installed Successfully....."
 
-echo "Verifying the installation...."
+echo "Verifying jdk-8-linux-x64.rpm installation...."
 java -version
 
-
-#echo "Removing jdk-8-linux-x64.rpm....."
-#rm jdk-8-linux-x64.rpm
+echo "Removing jdk-8-linux-x64.rpm started......"
+rm jdk-8-linux-x64.rpm
+echo "Removing jdk-8-linux-x64.rpm completed......"
