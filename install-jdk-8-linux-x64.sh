@@ -1,4 +1,4 @@
-#!/bin/bash -       
+#!/bin/bash    
 #title           :install-jdk-8-linux-x64.rpm.sh
 #description     :This script will install java8
 #author		     :nsandeep
