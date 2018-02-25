@@ -1,36 +1,33 @@
 #!/bin/bash    
-#title           :oracle-instantclient12.2-tools-12-x64h
+#title           :install-oracle-instantclient12.2-tools-12-x64.sh
 #description     :This script will install oracle-instantclient12
-#author		     :nsandeep
-#date            :Fri Feb  9 06:07:04 EST 2018
-#version         :0.1   
-#usage		     :bash oracle-instantclient12.2-tools-12-x64
-# You must accept the Oracle Binary Code License
-# http://www.oracle.com/technetwork/java/javase/terms/license/index.html
-# usage: get_jdk.sh <jdk_version> <ext>
-# jdk_version: 8(default) or 9
-# ext: rpm or tar.gz
-
+#author		     :sandeep(snamin501)
+#date            :Fri Feb  19 10:07:04 EST 2018
+#version         :1.0  
+#usage		     :sudo sh install-oracle-instantclient12.2-tools-12-x64.sh
+	
 if [[ $EUID -ne 0 ]]; then
    echo "your Not authorized to run  this script."
    exit 1
 fi
 
-echo "Downloading oracle-instantclient12.2-tools-12-x64.rpm started..."
-wget -O oracle-instantclient12.2-tools-12-x64.rpm  --no-cookies \
+oracle_instantclient_12="oracle-instantclient12.2-tools-12-x64.rpm"
+
+echo "Downloading  $oracle_instantclient_12 started..."
+sudo wget -O $oracle_instantclient_12  --no-cookies \
          --no-check-certificate \
          --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-         -N http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
-echo "Downloading oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_64.rpm completed..."
+         -N http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_12
+echo "Downloading $oracle_instantclient_12 completed..."
 
-echo "Assiginging permissions to oracle-instantclient12.2-tools-12-x64.rpm started..."
-chmod 777 oracle-instantclient12.2-tools-12-x64.rpm
-echo "Assiginging permissions to oracle-instantclient12.2-tools-12-x64.rpm completed..."
+echo "Assiginging permissions to $oracle_instantclient_12 started..."
+sudo chmod 777 $oracle_instantclient_12
+echo "Assiginging permissions to $oracle_instantclient_12 completed..."
 
-echo "Installation of oracle-instantclient12.2-tools-12-x64.rpm started..."
-sudo yum localinstall oracle-instantclient12.2-tools-12-x64.rpm -y
-echo "Installation of oracle-instantclient12.2-tools-12-x64.rpm completed..."
+echo "Installation of $oracle_instantclient_12 started..."
+sudo yum localinstall $oracle_instantclient_12 -y
+echo "Installation of $oracle_instantclient_12 completed..."
 
-echo "Removing oracle-instantclient12.2-tools-12-x64.rpm started......"
-rm oracle-instantclient12.2-tools-12-x64.rpm
-echo "Removing oracle-instantclient12.2-tools-12-x64.rpm completed......"
+echo "Removing $oracle_instantclient_12 started......"
+sudo rm $oracle_instantclient_12
+echo "Removing $oracle_instantclient_12 completed......"

@@ -1,45 +1,41 @@
 #!/bin/bash    
 #title           :install-pip-and-wheels.sh
-#description     :This script will install pip and wheel
-#author		     :nsandeep
-#date            :Fri Feb  9 06:07:04 EST 2018
-#version         :0.1   
-#usage		     :bash install-pip-and-wheels.sh
+#description     :This script will install pip-and-wheels
+#author		     :sandeep(snamin501)
+#date            :Fri Feb  19 10:07:04 EST 2018
+#version         :1.0  
+#usage		     :sudo sh install-pip-and-wheels.sh
 
-# You must accept the Oracle Binary Code License
-# http://www.oracle.com/technetwork/java/javase/terms/license/index.html
-# usage: get_jdk.sh <jdk_version> <ext>
-# jdk_version: 8(default) or 9
-# ext: rpm or tar.gz
 
 if [[ $EUID -ne 0 ]]; then
    echo "your Not authorized to run  this script."
    exit 1
 fi
 
-echo "Downloading pip started......."
-wget -O get-pip.py  "https://bootstrap.pypa.io/get-pip.py"
-echo "Downloading get-pip.py completed......."
+pip_and_wheels="get-pip.py"
 
-echo "Assiginging permissions to get-pip.py started....."
-chmod 777 get-pip.py
-echo "Assiginging permissions to get-pip.py completed....."
+echo "Downloading $pip_and_wheels started......."
+sudo wget -O $pip_and_wheels  "https://bootstrap.pypa.io/$pip_and_wheels"
+echo "Downloading $pip_and_wheels completed......."
 
-echo "Installation of get-pip.py started....."
-python get-pip.py
-echo "Installation of get-pip.py completed....."
-echo "get-pip.py installed Successfully....."
+echo "Assiginging permissions to $pip_and_wheels started....."
+sudo chmod 777 $pip_and_wheels
+echo "Assiginging permissions to $pip_and_wheels completed....."
 
-echo "Verifying get-pip.py installation...."
-pip -V
+echo "Installation of $pip_and_wheels started....."
+sudo python $pip_and_wheels
+echo "Installation of $pip_and_wheels completed....."
+echo "$pip_and_wheels installed Successfully....."
 
-echo "Removing get-pip.py started......"
-rm get-pip.py
-echo "Removing get-pip.py completed......"
+echo "Verifying $pip_and_wheels installation...."
+sudo pip -V
 
+echo "Removing $pip_and_wheels started......"
+sudo rm get-pip.py
+echo "Removing $pip_and_wheels completed......"
 
 echo "Installation of python -m pip install --upgrade pip setuptools wheel started....."
-python -m pip install --upgrade pip setuptools wheel
+sudo python -m pip install --upgrade pip setuptools wheel
 echo "Installation of python -m pip install --upgrade pip setuptools wheel completed....."
 
 
