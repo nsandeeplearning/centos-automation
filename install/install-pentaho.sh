@@ -19,7 +19,7 @@ ls
 
 	
 echo "Downloading pentaho $pentaho started......."
-wget -O $pentaho https://sourceforge.net/projects/pentaho/files/Data%20Integration/6.1/$pentaho/download
+wget -O $pentaho https://comcast.box.com/shared/static/i4i7h6o1xvuziczt6nltfsxob2nho9hl.zip
 echo "Downloading pentaho $pentaho completed......."
 
 pwd
