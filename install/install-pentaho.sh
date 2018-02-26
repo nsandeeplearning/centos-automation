@@ -13,6 +13,9 @@ fi
 
 pentaho="pdi-ce-6.1.0.1-196.zip"
 
+sudo mkdir /app
+
+sudo mkdir /app/oracle_instal
 
 echo "Downloading pentaho $pentaho started......."
 wget -O $pentaho https://comcast.box.com/shared/static/i4i7h6o1xvuziczt6nltfsxob2nho9hl.zip
