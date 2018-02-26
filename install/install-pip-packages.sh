@@ -6,7 +6,7 @@
 #version         :1.0  
 #usage		     :sudo sh install-pip-packages.sh
 
-# 42 pip packages...
+# 38 pip packages...
 
 if [[ $EUID -ne 0 ]]; then
    echo "your Not authorized to run  this script."
@@ -26,7 +26,7 @@ cx_Oracle="cx-Oracle"
 decorator="decorator"
 enum34="enum34"
 idna="idna"
-iniparse=iniparse"
+iniparse="iniparse"
 ipaddress="ipaddress"
 kitchen="kitchen"
 langtable="langtable"
@@ -44,9 +44,7 @@ PyNaCl="PyNaCl"
 pyodbc="pyodbc"
 pyparsing="pyparsing"
 pysftp="pysftp"
-python_augeas="python-augeas"
 python_dateutil="python-dateutil"
-python_dmidecode="python-dmidecode"
 pytz="pytz"
 pyudev="pyudev"
 pyxattr="pyxattr"
@@ -55,15 +53,13 @@ slip="slip"
 slip_dbus="slip.dbus"
 teradata="teradata"
 urlgrabber="urlgrabber"
-yum_langpacks="yum-langpacks"
-yum_metadata_parser="yum-metadata-parse"
 
-echo "Installing 42 pip packages..."
+
+echo "Installing 38 pip packages..."
 
 declare -a listpippkgs=($asn1crypto $bcrypt $cffi $chardet $configobj $configparser $cryptography $cx_Oracle $decorator $enum34
 $idna $iniparse $ipaddress $kitchen $langtable $numpy $pandas $paramiko $perf $pyasn1 $pycparser $pycurl $pygobject
-$pygpgme $pyliblzma $PyNaCl $pyodbc $pyparsing $pysftp $python_augeas $python_dateutil $python_dmidecode
-$pytz $pyudev $pyxattr $six $slip $slip_dbus $teradata $urlgrabber $yum_langpacks $yum_metadata_parser)
+$pygpgme $pyliblzma $PyNaCl $pyodbc $pyparsing $pysftp $python_dateutil $pytz $pyudev $pyxattr $six $slip $slip_dbus $teradata $urlgrabber)
 
 for pippkgname in ${listpippkgs[@]}
 do

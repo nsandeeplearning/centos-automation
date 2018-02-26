@@ -11,23 +11,33 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-oracle_instantclient_12="oracle-instantclient12.2-tools-12-x64.rpm"
+oracle_instantclient_basic_12="oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm"
+oracle_instantclient_tools_12="oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_64.rpm"
 
-echo "Downloading  $oracle_instantclient_12 started..."
-sudo wget -O $oracle_instantclient_12  --no-cookies \
-         --no-check-certificate \
-         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-         -N http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_12
-echo "Downloading $oracle_instantclient_12 completed..."
 
-echo "Assiginging permissions to $oracle_instantclient_12 started..."
-sudo chmod 777 $oracle_instantclient_12
-echo "Assiginging permissions to $oracle_instantclient_12 completed..."
+echo "Downloading  $oracle_instantclient_basic_12 started..."
+sudo wget -O $oracle_instantclient_basic_12 http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_basic_12
+echo "Downloading $oracle_instantclient_basic_12 completed..."
 
-echo "Installation of $oracle_instantclient_12 started..."
-sudo yum localinstall $oracle_instantclient_12 -y
-echo "Installation of $oracle_instantclient_12 completed..."
+echo "Downloading  $oracle_instantclient_tools_12 started..."
+sudo wget -O $oracle_instantclient_tools_12 http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_tools_12
+echo "Downloading $oracle_instantclient_tools_12 completed..."
 
-echo "Removing $oracle_instantclient_12 started......"
-sudo rm $oracle_instantclient_12
-echo "Removing $oracle_instantclient_12 completed......"
+echo "Assiginging permissions to $oracle_instantclient_basic_12 started..."
+sudo chmod 777 $oracle_instantclient_basic_12
+echo "Assiginging permissions to $oracle_instantclient_basic_12 completed..."
+
+echo "Assiginging permissions to $oracle_instantclient_tools_12 started..."
+sudo chmod 777 $oracle_instantclient_tools_12
+echo "Assiginging permissions to $oracle_instantclient_tools_12 completed..."
+
+
+echo "Installation of $oracle_instantclient_basic_12 started..."
+sudo yum localinstall $oracle_instantclient_basic_12 -y
+echo "Installation of $oracle_instantclient_basic_12 completed..."
+
+echo "Installation of $oracle_instantclient_tools_12 started..."
+sudo yum localinstall $oracle_instantclient_tools_12 -y
+echo "Installation of $oracle_instantclient_tools_12 completed..."
+
+

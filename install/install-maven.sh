@@ -28,4 +28,8 @@ sudo tar xzf $apache_maven_3
 echo "untar of $apache_maven_3 completed..."
 
 #linking to maven.
-sudo ln -s apache-maven-3.5.2
+sudo ln -s apache-maven-3.5.2  maven
+	
+echo "verifying  $apache_maven_3 started....."
+mvn -v
+echo "verifying   $apache_maven_3 completed....."

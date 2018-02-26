@@ -52,3 +52,7 @@ echo "Installation of $jdk_8_linux_64 started....."
 sudo yum localinstall $jdk_8_linux_64 -y
 echo "Installation of $jdk_8_linux_64 completed....."
 echo "$jdk_8_linux_64 installed Successfully....."
+
+echo "verifying  $jdk_8_linux_64 started....."
+java -version
+echo "verifying   $jdk_8_linux_64 completed....."

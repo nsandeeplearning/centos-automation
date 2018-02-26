@@ -16,12 +16,13 @@ wget="wget"
 zip="zip"
 unzip="unzip"
 git="git"
+vim="vim"
+declare -a toolslist=($wget $zip $unzip $unzip $vim)
 
-declare -a array=($wget $zip $unzip $unzip)
-
-for element in ${array[@]}
+for tool in ${toolslist[@]}
 do
-	echo "Installing $element started....."
-    sudo yum install $element -y
-    echo "Installing $element completed....."
+	echo "Installing $tool started....."
+    sudo yum install $tool -y
+    echo "Installing $tool completed....."
 done
+

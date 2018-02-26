@@ -13,24 +13,34 @@ fi
 
 pentaho="pdi-ce-6.1.0.1-196.zip"
 
-sudo cd /app
-sudo mkdir oracle_instal
+sudo mkdir /app/oracle_instal
+pwd
+ls
+
 	
 echo "Downloading pentaho $pentaho started......."
-wget -O $pentaho $pentaho https://sourceforge.net/projects/pentaho/files/Data%20Integration/6.1/$pentaho/download
+wget -O $pentaho https://sourceforge.net/projects/pentaho/files/Data%20Integration/6.1/$pentaho/download
 echo "Downloading pentaho $pentaho completed......."
 
+pwd
+
 echo "Assiginging permissions to pentaho $pentaho started....."
-sudo chmod 777 pentaho $pentaho
+sudo chmod 777 $pentaho
 echo "Assiginging permissions to pentaho $pentaho completed....."
 
+pwd
+
 echo "untar  of $pentaho started..."
-sudo tar xzf $pentaho
+sudo unzip $pentaho
 echo "untar of $pentaho completed..."
-ls -lat
-pwd
-sudo cd /home/KEB_ATHENA
-pwd
+
+mv data-integration /app/oracle_instal
+
+echo "verifying pentaho $pentaho started....."
+ls /app/oracle_instal
+echo "verifying  pentaho $pentaho completed....."
+
+
 
 
 
