@@ -19,7 +19,7 @@ git="git"
 vim="vim"
 unixODBC_devel="unixODBC-devel"
 
-declare -a toolslist=($wget $zip $unzip $unzip $vim $unixODBC_devel)
+declare -a toolslist=($wget $zip $unzip $git $unzip $vim $unixODBC_devel)
 
 for tool in ${toolslist[@]}
 do
