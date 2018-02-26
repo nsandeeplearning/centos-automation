@@ -14,22 +14,22 @@ fi
 apache_maven_3="apache-maven-3.5.2-bin.tar.gz"
 
 echo "Downloading $apache_maven_3 started......."
-cd /usr/local
-sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.5.2/binaries/$apache_maven_3
+wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
 echo "Downloading $apache_maven_3 completed......."
 
-echo "Assiginging permissions to $apache_maven_3 started....."
-sudo chmod 777 $apache_maven_3
-echo "Assiginging permissions to $apache_maven_3 completed....."
+echo "Downloading $apache_maven_3 started......."
+sudo yum install apache-maven -y
+echo "Downloading $apache_maven_3 completed......."
 
-#compiled version of maven-no installation required..
-echo "untar  of $apache_maven_3 started..."
-sudo tar xzf $apache_maven_3
-echo "untar of $apache_maven_3 completed..."
+echo 1 | sudo update-alternatives --config java
+	
+echo 1 | sudo update-alternatives --config javac
 
-#linking to maven.
-sudo ln -s apache-maven-3.5.2  maven
 	
 echo "verifying  $apache_maven_3 started....."
-mvn -v
+mvn -version
 echo "verifying   $apache_maven_3 completed....."
+
+
+
+
