@@ -21,9 +21,9 @@ echo "Downloading $apache_maven_3 started......."
 yum install apache-maven -y
 echo "Downloading $apache_maven_3 completed......."
 
-echo 1 | sudo update-alternatives --config java
+echo 1 | update-alternatives --config java
 	
-echo 1 | sudo update-alternatives --config javac
+echo 1 | update-alternatives --config javac
 
 	
 echo "verifying  $apache_maven_3 started....."
