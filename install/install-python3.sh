@@ -18,7 +18,7 @@ yum install yum-utils -y
 sudo yum-builddep python
 	
 echo "Downloading $Python3 started......."
-curl -O https://www.python.org/ftp/python/3.5.0/$Python3
+wget -O $Python3 https://comcast.box.com/shared/static/brdlqefh0h2g6b8759clr7r4qcpfctgm.tgz
 echo "Downloading $Python3 completed......."
 
 echo "Assiginging permissions to $Python3 started....."

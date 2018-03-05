@@ -16,11 +16,11 @@ oracle_instantclient_tools_12="oracle-instantclient12.2-tools-12.2.0.1.0-1.x86_6
 
 
 echo "Downloading  $oracle_instantclient_basic_12 started..."
-wget -O $oracle_instantclient_basic_12 http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_basic_12
+wget -O $oracle_instantclient_basic_12 https://comcast.box.com/shared/static/0be8ndipvfogq1on0n6nzmf2utd7vmxi.rpm
 echo "Downloading $oracle_instantclient_basic_12 completed..."
 
 echo "Downloading  $oracle_instantclient_tools_12 started..."
-wget -O $oracle_instantclient_tools_12 http://ftp.riken.jp/Linux/cern/centos/7/cernonly/x86_64/Packages/$oracle_instantclient_tools_12
+wget -O $oracle_instantclient_tools_12 https://comcast.box.com/shared/static/7kj7tsy73vdzot5eacd8fc0x2sy2ytoo.rpm
 echo "Downloading $oracle_instantclient_tools_12 completed..."
 
 echo "Assiginging permissions to $oracle_instantclient_basic_12 started..."

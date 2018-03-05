@@ -16,7 +16,7 @@ unixodbc="unixODBC.x86_64"
 tdodbc1620="tdodbc1620-16.20.00.18-1.noarch.rpm"
 
 echo "Downloading $teradata_client  started..."
-curl -O https://raw.githubusercontent.com/nsandeeplearning/centos-automation/master/softwares/$teradata_client
+wget -O $teradata_client https://comcast.box.com/shared/static/hun0svsaz69en0u8u4mzttfuzg03okyc.gz
 echo "Downloading $teradata_client completed..."
 
 echo "Assiginging permissions to $teradata_client started..."

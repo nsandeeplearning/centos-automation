@@ -18,7 +18,7 @@ mkdir /app
 mkdir /app/oracle_instal
 
 echo "Downloading pentaho $pentaho started......."
-wget -O $pentaho https://comcast.box.com/shared/static/i4i7h6o1xvuziczt6nltfsxob2nho9hl.zip
+wget -O $pentaho https://comcast.box.com/shared/static/wobw1lm08rxztzl0mbl1omxbu14lk6vr.zip
 echo "Downloading pentaho $pentaho completed......."
 
 pwd
