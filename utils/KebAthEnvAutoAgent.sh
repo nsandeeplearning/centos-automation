@@ -14,8 +14,10 @@ fi
 #scripts dir
 keb_current_dir="/home/KEB_ATHENA/"
 
-#githubURls:-
-install_url="https://raw.githubusercontent.com/nsandeeplearning/centos-automation/master/install"
+#boxURls:-
+install_url="https://comcast.box.com/shared/static"
+
+
 
 #softwares to download..
 inst_java_8="install-jdk-8-linux-x64.sh"
@@ -30,18 +32,36 @@ inst_pip_packages="install-pip-packages.sh"
 inst_python3="install-python3.sh"
 inst_teradata_client_and_unixodbc="install-teradata-client-and-unixodbc.sh"
 
+#box softwares to download..
+inst_java_8_box="o2um8tdxz3pjpp1ddosmv828yay3sg03.sh"
+inst_ora_client_box="jordetld393ve6k28kilkb56cfbvorzn.sh"
+inst_py_devel_box="4p8709cs46j19cofle4cyg5ytwh088qf.sh"
+inst_pip_and_wheels_box="krzbt3ia8yx5bmsdg6hg2b1e38m9cmbj.sh"
+inst_git_wget_zip_box="0g8q9pd78lb3n5cp9ifvtzsm5n98tp57.sh"
+inst_mave_box="qajneh1ygrvlhpkewbn3avq9ydv29olx.sh"
+inst_ms_sqlclient_box="lgte1ldoirb219zp524zx7iz1x03957i.sh"
+inst_pentaho_box="o797uf93o8ui11easm9a5wubdlza4ibl.sh"
+inst_pip_packages_box="y10kach5eprg9g4zbqewhdb8oe6331o4.sh"
+inst_python3_box="gotkksz2tji4o3sh1nwt7mr4w6ej8xl9.sh"
+inst_teradata_client_and_unixodbc_box="p2sx7mh0eq6skzcatksb2663ue9fcvnm.sh"
+
+
 function KebAthEnvAutoAgent_pull_scripts
 {
 
 declare -a softlist=($inst_java_8 $inst_ora_client $inst_py_devel $inst_pip_and_wheels $inst_git_wget_zip
 $inst_maven $inst_ms_sqlclient $inst_pentaho $inst_pip_packages $inst_python3 $inst_teradata_client_and_unixodbc)
 
+
+declare -a softlist_box=($inst_java_8_box $inst_ora_client_box $inst_py_devel_box $inst_pip_and_wheels_box $inst_git_wget_zip_box
+$inst_maven_box $inst_ms_sqlclient_box $inst_pentaho_box $inst_pip_packages_box $inst_python3_box $inst_teradata_client_and_unixodbc_box)
+
 #getting files from github.
-for soft in ${softlist[@]}
-do
-	echo "getting files for  $soft started....."
-    curl -O $install_url/$soft
-    echo "getting files for $soft completed....."
+
+for soft_box in ${!softlist[*]}; do 
+	echo "getting files for  ${softlist[$soft_box]} started....."
+    curl $install_url/${softlist_box[$soft_box] -o ${softlist[$soft_box]}
+    echo "getting files for ${softlist[$soft_box]} completed....."
 done
 
 
