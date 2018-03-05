@@ -14,13 +14,13 @@ fi
 msodbcsql="msodbcsql-13.1.9.2-1.x86_64.rpm"
 
 echo "Downloading $msodbcsql started..."
-sudo wget https://packages.microsoft.com/rhel/7/prod/$msodbcsql
+wget https://packages.microsoft.com/rhel/7/prod/$msodbcsql
 echo "Downloading $msodbcsql completed..."
 
 echo "Assiginging permissions to $msodbcsql started..."
-sudo chmod 777 $msodbcsql
+chmod 777 $msodbcsql
 echo "Assiginging permissions to $msodbcsql completed..."
 
 echo "Installation of $msodbcsql started..."
-sudo ACCEPT_EULA=Y yum localinstall $msodbcsql -y
+ACCEPT_EULA=Y yum localinstall $msodbcsql -y
 echo "Installation of $msodbcsql completed..."

@@ -45,11 +45,11 @@ done
 echo "Downloading $jdk_8_linux_64 completed......."
 
 echo "Assiginging permissions to $jdk_8_linux_64 started....."
-sudo chmod 777 $jdk_8_linux_64
+chmod 777 $jdk_8_linux_64
 echo "Assiginging permissions to $jdk_8_linux_64 completed....."
 
 echo "Installation of $jdk_8_linux_64 started....."
-sudo yum localinstall $jdk_8_linux_64 -y
+yum localinstall $jdk_8_linux_64 -y
 echo "Installation of $jdk_8_linux_64 completed....."
 echo "$jdk_8_linux_64 installed Successfully....."
 

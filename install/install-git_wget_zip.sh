@@ -24,7 +24,7 @@ declare -a toolslist=($wget $zip $unzip $git $unzip $vim $unixODBC_devel)
 for tool in ${toolslist[@]}
 do
 	echo "Installing $tool started....."
-    sudo yum install $tool -y
+    yum install $tool -y
     echo "Installing $tool completed....."
 done
 

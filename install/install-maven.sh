@@ -18,7 +18,7 @@ wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.re
 echo "Downloading $apache_maven_3 completed......."
 
 echo "Downloading $apache_maven_3 started......."
-sudo yum install apache-maven -y
+yum install apache-maven -y
 echo "Downloading $apache_maven_3 completed......."
 
 echo 1 | sudo update-alternatives --config java

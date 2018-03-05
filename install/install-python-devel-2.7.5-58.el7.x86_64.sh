@@ -14,18 +14,18 @@ fi
 python_devel_2="python-devel-2.7.5-58.el7.x86_64.rpm"
 
 echo "Downloading $python_devel_2 started......."
-sudo wget -O $python_devel_2  "http://mirror.centos.org/centos/7/os/x86_64/Packages/$python_devel_2"
+wget -O $python_devel_2  "http://mirror.centos.org/centos/7/os/x86_64/Packages/$python_devel_2"
 echo "Downloading $python_devel_2 completed......."
 
 echo "Assiginging permissions to $python_devel_2 started....."
-sudo chmod 777 $python_devel_2
+chmod 777 $python_devel_2
 echo "Assiginging permissions to $python_devel_2 completed....."
 
 echo "Installation of $python_devel_2 started....."
-sudo yum localinstall $python_devel_2
+yum localinstall $python_devel_2
 echo "Installation of $python_devel_2 completed....."
 echo "$python_devel_2 installed Successfully....."
 
 echo "$python_devel_2 started......"
-sudo rm $python_devel_2
+rm $python_devel_2
 echo "Removing $python_devel_2 completed......"

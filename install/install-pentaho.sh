@@ -13,9 +13,9 @@ fi
 
 pentaho="pdi-ce-6.1.0.1-196.zip"
 
-sudo mkdir /app
+mkdir /app
 
-sudo mkdir /app/oracle_instal
+mkdir /app/oracle_instal
 
 echo "Downloading pentaho $pentaho started......."
 wget -O $pentaho https://comcast.box.com/shared/static/i4i7h6o1xvuziczt6nltfsxob2nho9hl.zip
@@ -24,13 +24,13 @@ echo "Downloading pentaho $pentaho completed......."
 pwd
 
 echo "Assiginging permissions to pentaho $pentaho started....."
-sudo chmod 777 $pentaho
+chmod 777 $pentaho
 echo "Assiginging permissions to pentaho $pentaho completed....."
 
 pwd
 
 echo "untar  of $pentaho started..."
-sudo unzip $pentaho
+unzip $pentaho
 echo "untar of $pentaho completed..."
 
 mv data-integration /app/oracle_instal

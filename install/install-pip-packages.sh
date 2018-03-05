@@ -63,10 +63,10 @@ $pygpgme $pyliblzma $PyNaCl $pyodbc $pyparsing $pysftp $python_dateutil $pytz $p
 for pippkgname in ${listpippkgs[@]}
 do
 	echo "Installation of Pip install for  $pippkgname started....."
-    sudo pip install $pippkgname
+    pip install $pippkgname
     echo "Installation of Pip install for $pippkgname completed....."
 done
 
 echo "Verifying pip packages installation...."
-sudo pip freeze
+pip freeze
 

@@ -15,27 +15,27 @@ fi
 pip_and_wheels="get-pip.py"
 
 echo "Downloading $pip_and_wheels started......."
-sudo wget -O $pip_and_wheels  "https://bootstrap.pypa.io/$pip_and_wheels"
+wget -O $pip_and_wheels  "https://bootstrap.pypa.io/$pip_and_wheels"
 echo "Downloading $pip_and_wheels completed......."
 
 echo "Assiginging permissions to $pip_and_wheels started....."
-sudo chmod 777 $pip_and_wheels
+chmod 777 $pip_and_wheels
 echo "Assiginging permissions to $pip_and_wheels completed....."
 
 echo "Installation of $pip_and_wheels started....."
-sudo python $pip_and_wheels
+python $pip_and_wheels
 echo "Installation of $pip_and_wheels completed....."
 echo "$pip_and_wheels installed Successfully....."
 
 echo "Verifying $pip_and_wheels installation...."
-sudo pip -V
+pip -V
 
 echo "Removing $pip_and_wheels started......"
-sudo rm get-pip.py
+rm get-pip.py
 echo "Removing $pip_and_wheels completed......"
 
 echo "Installation of python -m pip install --upgrade pip setuptools wheel started....."
-sudo python -m pip install --upgrade pip setuptools wheel
+python -m pip install --upgrade pip setuptools wheel
 echo "Installation of python -m pip install --upgrade pip setuptools wheel completed....."
 
 

@@ -16,20 +16,20 @@ unixodbc="unixODBC.x86_64"
 tdodbc1620="tdodbc1620-16.20.00.18-1.noarch.rpm"
 
 echo "Downloading $teradata_client  started..."
-sudo curl -O https://raw.githubusercontent.com/nsandeeplearning/centos-automation/master/softwares/$teradata_client
+curl -O https://raw.githubusercontent.com/nsandeeplearning/centos-automation/master/softwares/$teradata_client
 echo "Downloading $teradata_client completed..."
 
 echo "Assiginging permissions to $teradata_client started..."
-sudo chmod 777 $teradata_client
+chmod 777 $teradata_client
 echo "Assiginging permissions to $teradata_client completed..."
 
 echo "untar $teradata_client started..."
-sudo tar xzf $teradata_client
+tar xzf $teradata_client
 echo "untar $teradata_client completed..."
 
 #prerequisite
 echo "Installation of $unixodbc  started..."
-sudo yum install $unixodbc -y
+yum install $unixodbc -y
 echo "Installation of $unixodbc completed..."
 
 echo "change to tdodbc1620 DIR."
@@ -37,6 +37,6 @@ cd tdodbc1620
 pwd
 
 echo "Installing $tdodbc1620 started..."
-sudo yum localinstall $tdodbc1620 -y
+yum localinstall $tdodbc1620 -y
 echo "Installing of $tdodbc1620 completed..."
 

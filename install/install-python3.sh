@@ -13,20 +13,20 @@ fi
 
 Python3="Python-3.5.0.tgz"
 
-sudo yum install yum-utils -y
+yum install yum-utils -y
 
 sudo yum-builddep python
 	
 echo "Downloading $Python3 started......."
-sudo curl -O https://www.python.org/ftp/python/3.5.0/$Python3
+curl -O https://www.python.org/ftp/python/3.5.0/$Python3
 echo "Downloading $Python3 completed......."
 
 echo "Assiginging permissions to $Python3 started....."
-sudo chmod 777 $Python3
+chmod 777 $Python3
 echo "Assiginging permissions to $Python3 completed....."
 
 echo "untar  of $Python3 started..."
-sudo tar xzf $Python3
+tar xzf $Python3
 echo "untar of $Python3 completed..."
 
 
@@ -35,11 +35,11 @@ cd Python-3.5.0
 #having multiple copies of python running
 ./configure
 make
-sudo make install
+make install
 echo "$Python3 installed Successfully....."
 
 echo "Installation of pip tarted....."
-sudo easy_install pip
+easy_install pip
 echo "Assiginging permissions to pip completed....."	
 
 echo "verifying pentaho $Python3 started....."
