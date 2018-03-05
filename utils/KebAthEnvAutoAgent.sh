@@ -49,19 +49,16 @@ inst_teradata_client_and_unixodbc_box="p2sx7mh0eq6skzcatksb2663ue9fcvnm.sh"
 function KebAthEnvAutoAgent_pull_scripts
 {
 
-declare -a softlist=($inst_java_8 $inst_ora_client $inst_py_devel $inst_pip_and_wheels $inst_git_wget_zip
-$inst_maven $inst_ms_sqlclient $inst_pentaho $inst_pip_packages $inst_python3 $inst_teradata_client_and_unixodbc)
-
-
-declare -a softlist_box=($inst_java_8_box $inst_ora_client_box $inst_py_devel_box $inst_pip_and_wheels_box $inst_git_wget_zip_box
+declare -a softlist=($inst_java_8_box $inst_ora_client_box $inst_py_devel_box $inst_pip_and_wheels_box $inst_git_wget_zip_box
 $inst_maven_box $inst_ms_sqlclient_box $inst_pentaho_box $inst_pip_packages_box $inst_python3_box $inst_teradata_client_and_unixodbc_box)
 
 #getting files from github.
 
-for soft_box in ${!softlist[*]}; do 
-	echo "getting files for  ${softlist[$soft_box]} started....."
-    curl $install_url/${softlist_box[$soft_box] -o ${softlist[$soft_box]}
-    echo "getting files for ${softlist[$soft_box]} completed....."
+for soft_box in ${softlist[@]}
+do 
+	echo "getting files for  $soft started....."
+    wget -O  $soft $install_url/$soft
+    echo "getting files for $soft completed....."
 done
 
 
