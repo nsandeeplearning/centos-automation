@@ -1,0 +1,24 @@
+https://www.liquidweb.com/kb/how-to-check-and-verify-the-version-of-python/
+Wrap-up: Verify The Installation
+View a list of helpful commands:
+
+pip --help
+
+Check the version of Pip that is installed:
+
+pip -V
+
+Check and Verify a Python Installation
+Check the version of Python installed with the following command:
+
+python --version
+
+Which should yield a response similar to:
+
+Python 2.7.5
+
+Enter the Python command line with the following command:
+
+python
+
+https://stackoverflow.com/questions/19430346/how-can-i-tell-if-python-setuptools-is-installed

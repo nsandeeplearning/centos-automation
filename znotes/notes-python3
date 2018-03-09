@@ -1,0 +1,28 @@
+http://ask.xmodulo.com/install-python3-centos.html
+
+First, install minimum necessary tools:
+
+$ sudo yum install yum-utils
+Then using yum-builddep, set up a necessary build environment for python3 and install missing dependencies. The following command will automatically take care of that.
+
+$ sudo yum-builddep python
+Now download the latest python3 (e.g., python 3.5) from https://www.python.org/ftp/python/
+
+$ curl -O https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+Finally, build and install python3 as follows. The default installation directory is /usr/local. If you want to change this to some other directory, pass "--prefix=/alternative/path" parameter to configure before running make.
+
+$ tar xf Python-3.5.0.tgz
+$ cd Python-3.5.0
+$ ./configure
+$ make
+$ sudo make install
+
+https://askubuntu.com/questions/763059/use-pip-with-python-3-5
+easy_install pip
+
+https://www.cyberciti.biz/faq/centos-install-zlib-devel/
+
+
+https://janikarhunen.fi/how-to-install-python-3-6-1-on-centos-7.html
+
+https://github.comcast.com/CSP/csp-qa/blob/master/testLocalhost.sh
